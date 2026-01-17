@@ -82,8 +82,8 @@ class TimeMap:
 
     def set(self, key: str, value: str, timestamp: int) -> None:
         if key not in self.seen:
-            self.seen[key] = []
-        self.seen[key].append([value, timestamp])        
+            self.seen[key] = {}
+        self.seen[key].append([timestamp, value])        
 
     def get(self, key: str, timestamp: int) -> str:
         if key not in self.seen:
