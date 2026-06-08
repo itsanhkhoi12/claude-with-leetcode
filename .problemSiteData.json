@@ -1,263 +1,279 @@
 [
-    {
-        "problem": "Two Sum",
-        "pattern": "Arrays & Hashing",
-        "difficulty": "Easy",
-        "link": "two-sum",
-        "code": "0001"
-    },
-    {
-        "problem": "Add Two Numbers",
-        "pattern": "Linked List",
-        "difficulty": "Medium",
-        "link": "add-two-numbers",
-        "code": "0002",
-        "java": true
-    },
-    {
-        "problem": "Zigzag Conversion",
-        "pattern": "String",
-        "difficulty": "Medium",
-        "link": "zigzag-conversion",
-        "code": "0006",
-        "cpp": true
-    },
-    {
-        "problem": "Permutations II",
-        "pattern": "Array",
-        "difficulty": "Medium",
-        "link": "permutations-ii",
-        "code": "0047",
-        "cpp": true
-    },
-    {
-        "problem": "Shortest Palindrome",
-        "pattern": "String",
-        "difficulty": "Hard",
-        "link": "shortest-palindrome",
-        "code": "0214",
-        "cpp": true
-    },
-    {
-        "problem": "Contains Duplicate II",
-        "pattern": "Array",
-        "difficulty": "Easy",
-        "link": "contains-duplicate-ii",
-        "code": "0219",
-        "cpp": true
-    },
-    {
-        "problem": "Longest Repeating Character Replacement",
-        "pattern": "Hash Table",
-        "difficulty": "Medium",
-        "link": "longest-repeating-character-replacement",
-        "code": "0424",
-        "cpp": true
-    },
-    {
-        "problem": "Find Pivot Index",
-        "pattern": "Array",
-        "difficulty": "Easy",
-        "link": "find-pivot-index",
-        "code": "0724"
-    },
-    {
-        "problem": "Number of Substrings Containing All Three Characters",
-        "pattern": "Hash Table",
-        "difficulty": "Medium",
-        "link": "number-of-substrings-containing-all-three-characters",
-        "code": "1358",
-        "cpp": true
-    },
-    {
-        "problem": "Longest Happy Prefix",
-        "pattern": "String",
-        "difficulty": "Hard",
-        "link": "longest-happy-prefix",
-        "code": "1392",
-        "cpp": true
-    },
-    {
-        "problem": "Maximum Number of Vowels in a Substring of Given Length",
-        "pattern": "String",
-        "difficulty": "Medium",
-        "link": "maximum-number-of-vowels-in-a-substring-of-given-length",
-        "code": "1456",
-        "cpp": true
-    },
-    {
-        "problem": "Longest Subarray of 1's After Deleting One Element",
-        "pattern": "Array",
-        "difficulty": "Medium",
-        "link": "longest-subarray-of-1s-after-deleting-one-element",
-        "code": "1493",
-        "cpp": true
-    },
-    {
-        "problem": "Maximum Length of Subarray With Positive Product",
-        "pattern": "Array",
-        "difficulty": "Medium",
-        "link": "maximum-length-of-subarray-with-positive-product",
-        "code": "1567"
-    },
-    {
-        "problem": "Determine if Two Strings Are Close",
-        "pattern": "Hash Table",
-        "difficulty": "Medium",
-        "link": "determine-if-two-strings-are-close",
-        "code": "1657",
-        "rust": true,
-        "python": true,
-        "cpp": true
-    },
-    {
-        "problem": "Create Binary Tree From Descriptions",
-        "pattern": "Array",
-        "difficulty": "Medium",
-        "link": "create-binary-tree-from-descriptions",
-        "code": "2196",
-        "cpp": true
-    },
-    {
-        "problem": "Sum of Scores of Built Strings",
-        "pattern": "String",
-        "difficulty": "Hard",
-        "link": "sum-of-scores-of-built-strings",
-        "code": "2223",
-        "cpp": true
-    },
-    {
-        "problem": "Intersection of Multiple Arrays",
-        "pattern": "Array",
-        "difficulty": "Easy",
-        "link": "intersection-of-multiple-arrays",
-        "code": "2248"
-    },
-    {
-        "problem": "Equal Row and Column Pairs",
-        "pattern": "Array",
-        "difficulty": "Medium",
-        "link": "equal-row-and-column-pairs",
-        "code": "2352",
-        "cpp": true
-    },
-    {
-        "problem": "Removing Stars From a String",
-        "pattern": "String",
-        "difficulty": "Medium",
-        "link": "removing-stars-from-a-string",
-        "code": "2390",
-        "cpp": true
-    },
-    {
-        "problem": "Left and Right Sum Differences",
-        "pattern": "Array",
-        "difficulty": "Easy",
-        "link": "left-and-right-sum-differences",
-        "code": "2574",
-        "cpp": true
-    },
-    {
-        "problem": "Earliest Finish Time for Land and Water Rides I",
-        "pattern": "Array",
-        "difficulty": "Easy",
-        "link": "earliest-finish-time-for-land-and-water-rides-i",
-        "code": "3633",
-        "cpp": true
-    },
-    {
-        "problem": "Earliest Finish Time for Land and Water Rides II",
-        "pattern": "Array",
-        "difficulty": "Medium",
-        "link": "earliest-finish-time-for-land-and-water-rides-ii",
-        "code": "3635",
-        "cpp": true
-    },
-    {
-        "problem": "Total Waviness of Numbers in Range I",
-        "pattern": "Math",
-        "difficulty": "Medium",
-        "link": "total-waviness-of-numbers-in-range-i",
-        "code": "3751",
-        "cpp": true
-    },
-    {
-        "problem": "Total Waviness of Numbers in Range II",
-        "pattern": "Math",
-        "difficulty": "Hard",
-        "link": "total-waviness-of-numbers-in-range-ii",
-        "code": "3753",
-        "cpp": true
-    },
-    {
-        "problem": "Limit Occurrences in Sorted Array",
-        "pattern": "Contest",
-        "difficulty": "Easy",
-        "link": "limit-occurrences-in-sorted-array",
-        "code": "3940"
-    },
-    {
-        "problem": "Exactly One Consecutive Set Bits Pair",
-        "pattern": "Contest",
-        "difficulty": "Easy",
-        "link": "exactly-one-consecutive-set-bits-pair",
-        "code": "3950",
-        "cpp": true
-    },
-    {
-        "problem": "Minimum Energy to Maintain Brightness",
-        "pattern": "Contest",
-        "difficulty": "Medium",
-        "link": "minimum-energy-to-maintain-brightness",
-        "code": "3951",
-        "cpp": true
-    },
-    {
-        "problem": "Maximum Total Value of Covered Indices",
-        "pattern": "Contest",
-        "difficulty": "Medium",
-        "link": "maximum-total-value-of-covered-indices",
-        "code": "3952",
-        "cpp": true
-    },
-    {
-        "problem": "Maximum Score with Co-Prime Element",
-        "pattern": "Contest",
-        "difficulty": "Hard",
-        "link": "maximum-score-with-co-prime-element",
-        "code": "3953",
-        "cpp": true
-    },
-    {
-        "problem": "Sum of Compatible Numbers in Range I",
-        "pattern": "Contest",
-        "difficulty": "Easy",
-        "link": "sum-of-compatible-numbers-in-range-i",
-        "code": "3954",
-        "cpp": true
-    },
-    {
-        "problem": "Valid Binary Strings With Cost Limit",
-        "pattern": "Contest",
-        "difficulty": "Medium",
-        "link": "valid-binary-strings-with-cost-limit",
-        "code": "3955",
-        "cpp": true
-    },
-    {
-        "problem": "Maximum Sum of M Non-Overlapping Subarrays I",
-        "pattern": "Contest",
-        "difficulty": "Hard",
-        "link": "maximum-sum-of-m-non-overlapping-subarrays-i",
-        "code": "3956",
-        "cpp": true
-    },
-    {
-        "problem": "Maximum Sum of M Non-Overlapping Subarrays II",
-        "pattern": "Contest",
-        "difficulty": "Hard",
-        "link": "maximum-sum-of-m-non-overlapping-subarrays-ii",
-        "code": "3957",
-        "cpp": true
-    }
+  {
+    "problem": "Two Sum",
+    "pattern": "Arrays & Hashing",
+    "difficulty": "Easy",
+    "link": "two-sum",
+    "code": "0001"
+  },
+  {
+    "problem": "Add Two Numbers",
+    "pattern": "Linked List",
+    "difficulty": "Medium",
+    "link": "add-two-numbers",
+    "code": "0002",
+    "java": true
+  },
+  {
+    "problem": "Zigzag Conversion",
+    "pattern": "String",
+    "difficulty": "Medium",
+    "link": "zigzag-conversion",
+    "code": "0006",
+    "cpp": true
+  },
+  {
+    "problem": "Merge Two Sorted Lists",
+    "pattern": "Linked List",
+    "difficulty": "Easy",
+    "link": "merge-two-sorted-lists",
+    "code": "0021",
+    "cpp": true
+  },
+  {
+    "problem": "Permutations II",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "permutations-ii",
+    "code": "0047",
+    "cpp": true
+  },
+  {
+    "problem": "Shortest Palindrome",
+    "pattern": "String",
+    "difficulty": "Hard",
+    "link": "shortest-palindrome",
+    "code": "0214",
+    "cpp": true
+  },
+  {
+    "problem": "Contains Duplicate II",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "contains-duplicate-ii",
+    "code": "0219",
+    "cpp": true
+  },
+  {
+    "problem": "Longest Repeating Character Replacement",
+    "pattern": "Hash Table",
+    "difficulty": "Medium",
+    "link": "longest-repeating-character-replacement",
+    "code": "0424",
+    "cpp": true
+  },
+  {
+    "problem": "Find Pivot Index",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "find-pivot-index",
+    "code": "0724"
+  },
+  {
+    "problem": "Number of Substrings Containing All Three Characters",
+    "pattern": "Hash Table",
+    "difficulty": "Medium",
+    "link": "number-of-substrings-containing-all-three-characters",
+    "code": "1358",
+    "cpp": true
+  },
+  {
+    "problem": "Longest Happy Prefix",
+    "pattern": "String",
+    "difficulty": "Hard",
+    "link": "longest-happy-prefix",
+    "code": "1392",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Number of Vowels in a Substring of Given Length",
+    "pattern": "String",
+    "difficulty": "Medium",
+    "link": "maximum-number-of-vowels-in-a-substring-of-given-length",
+    "code": "1456",
+    "cpp": true
+  },
+  {
+    "problem": "Longest Subarray of 1's After Deleting One Element",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "longest-subarray-of-1s-after-deleting-one-element",
+    "code": "1493",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Length of Subarray With Positive Product",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "maximum-length-of-subarray-with-positive-product",
+    "code": "1567"
+  },
+  {
+    "problem": "Determine if Two Strings Are Close",
+    "pattern": "Hash Table",
+    "difficulty": "Medium",
+    "link": "determine-if-two-strings-are-close",
+    "code": "1657",
+    "rust": true,
+    "python": true,
+    "cpp": true
+  },
+  {
+    "problem": "Partition Array According to Given Pivot",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "partition-array-according-to-given-pivot",
+    "code": "2161",
+    "cpp": true
+  },
+  {
+    "problem": "Create Binary Tree From Descriptions",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "create-binary-tree-from-descriptions",
+    "code": "2196",
+    "cpp": true
+  },
+  {
+    "problem": "Sum of Scores of Built Strings",
+    "pattern": "String",
+    "difficulty": "Hard",
+    "link": "sum-of-scores-of-built-strings",
+    "code": "2223",
+    "cpp": true
+  },
+  {
+    "problem": "Intersection of Multiple Arrays",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "intersection-of-multiple-arrays",
+    "code": "2248"
+  },
+  {
+    "problem": "Equal Row and Column Pairs",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "equal-row-and-column-pairs",
+    "code": "2352",
+    "cpp": true
+  },
+  {
+    "problem": "Removing Stars From a String",
+    "pattern": "String",
+    "difficulty": "Medium",
+    "link": "removing-stars-from-a-string",
+    "code": "2390",
+    "cpp": true
+  },
+  {
+    "problem": "Left and Right Sum Differences",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "left-and-right-sum-differences",
+    "code": "2574",
+    "cpp": true
+  },
+  {
+    "problem": "Earliest Finish Time for Land and Water Rides I",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "earliest-finish-time-for-land-and-water-rides-i",
+    "code": "3633",
+    "cpp": true
+  },
+  {
+    "problem": "Earliest Finish Time for Land and Water Rides II",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "earliest-finish-time-for-land-and-water-rides-ii",
+    "code": "3635",
+    "cpp": true
+  },
+  {
+    "problem": "Total Waviness of Numbers in Range I",
+    "pattern": "Math",
+    "difficulty": "Medium",
+    "link": "total-waviness-of-numbers-in-range-i",
+    "code": "3751",
+    "cpp": true
+  },
+  {
+    "problem": "Total Waviness of Numbers in Range II",
+    "pattern": "Math",
+    "difficulty": "Hard",
+    "link": "total-waviness-of-numbers-in-range-ii",
+    "code": "3753",
+    "cpp": true
+  },
+  {
+    "problem": "Limit Occurrences in Sorted Array",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "limit-occurrences-in-sorted-array",
+    "code": "3940"
+  },
+  {
+    "problem": "Exactly One Consecutive Set Bits Pair",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "exactly-one-consecutive-set-bits-pair",
+    "code": "3950",
+    "cpp": true
+  },
+  {
+    "problem": "Minimum Energy to Maintain Brightness",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "minimum-energy-to-maintain-brightness",
+    "code": "3951",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Total Value of Covered Indices",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "maximum-total-value-of-covered-indices",
+    "code": "3952",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Score with Co-Prime Element",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "maximum-score-with-co-prime-element",
+    "code": "3953",
+    "cpp": true
+  },
+  {
+    "problem": "Sum of Compatible Numbers in Range I",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "sum-of-compatible-numbers-in-range-i",
+    "code": "3954",
+    "cpp": true
+  },
+  {
+    "problem": "Valid Binary Strings With Cost Limit",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "valid-binary-strings-with-cost-limit",
+    "code": "3955",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Sum of M Non-Overlapping Subarrays I",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "maximum-sum-of-m-non-overlapping-subarrays-i",
+    "code": "3956",
+    "cpp": true
+  },
+  {
+    "problem": "Maximum Sum of M Non-Overlapping Subarrays II",
+    "pattern": "Contest",
+    "difficulty": "Hard",
+    "link": "maximum-sum-of-m-non-overlapping-subarrays-ii",
+    "code": "3957",
+    "cpp": true
+  }
 ]

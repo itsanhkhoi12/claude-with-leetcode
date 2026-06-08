@@ -18,7 +18,6 @@ A little assistant from Claude to help you learn daily LeetCode problems organis
 ## Table of Contents
 
 - [Structure](#structure)
-- [How It Works](#how-it-works)
 - [Problem List](#problem-list)
 
 ## Structure
@@ -70,6 +69,7 @@ claude-with-leetcode/
 
 <sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>Python</sub> | <sub>Rust</sub>
 ---- | ---- | ---- | ---- | ---- | ----
+<sub>[0021 - Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)</sub> | <sub>🟢 Easy</sub> | <sub><div align='center'>[✔️](cpp%2F21-merge-two-sorted-lists%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[0002 - Add Two Numbers](https://leetcode.com/problems/add-two-numbers)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](java%2F2-add-two-numbers%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 
 ### String
@@ -95,6 +95,7 @@ claude-with-leetcode/
 <sub>[0047 - Permutations II](https://leetcode.com/problems/permutations-ii)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](cpp%2F47-permutations-ii%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[1493 - Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](cpp%2F1493-longest-subarray-of-1s-after-deleting-one-element%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[1567 - Maximum Length of Subarray With Positive Product](https://leetcode.com/problems/maximum-length-of-subarray-with-positive-product)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[2161 - Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](cpp%2F2161-partition-array-according-to-given-pivot%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[2196 - Create Binary Tree From Descriptions](https://leetcode.com/problems/create-binary-tree-from-descriptions)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](cpp%2F2196-create-binary-tree-from-descriptions%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[2352 - Equal Row and Column Pairs](https://leetcode.com/problems/equal-row-and-column-pairs)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](cpp%2F2352-equal-row-and-column-pairs%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[3635 - Earliest Finish Time for Land and Water Rides II](https://leetcode.com/problems/earliest-finish-time-for-land-and-water-rides-ii)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](cpp%2F3635-earliest-finish-time-for-land-and-water-rides-ii%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
@@ -114,23 +115,18 @@ claude-with-leetcode/
 <sub>[3751 - Total Waviness of Numbers in Range I](https://leetcode.com/problems/total-waviness-of-numbers-in-range-i)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](cpp%2F3751-total-waviness-of-numbers-in-range-i%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[3753 - Total Waviness of Numbers in Range II](https://leetcode.com/problems/total-waviness-of-numbers-in-range-ii)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>[✔️](cpp%2F3753-total-waviness-of-numbers-in-range-ii%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 
-### Uncategorized
+### Contest
 
 <sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>Python</sub> | <sub>Rust</sub>
 ---- | ---- | ---- | ---- | ---- | ----
 <sub>[3940 - Limit Occurrences in Sorted Array](https://leetcode.com/problems/limit-occurrences-in-sorted-array)</sub> | <sub>🟢 Easy</sub> | <sub><div align='center'>[✔️](cpp%2F3940-limit-occurrences-in-sorted-array%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[3950 - Exactly One Consecutive Set Bits Pair](https://leetcode.com/problems/exactly-one-consecutive-set-bits-pair)</sub> | <sub>🟢 Easy</sub> | <sub><div align='center'>[✔️](cpp%2F3950-exactly-one-consecutive-set-bits-pair%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[3954 - Sum of Compatible Numbers in Range I](https://leetcode.com/problems/sum-of-compatible-numbers-in-range-i)</sub> | <sub>🟢 Easy</sub> | <sub><div align='center'>[✔️](cpp%2F3954-sum-of-compatible-numbers-in-range-i%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[3951 - Minimum Energy to Maintain Brightness](https://leetcode.com/problems/minimum-energy-to-maintain-brightness)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](cpp%2F3951-minimum-energy-to-maintain-brightness%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[3952 - Maximum Total Value of Covered Indices](https://leetcode.com/problems/maximum-total-value-of-covered-indices)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](cpp%2F3952-maximum-total-value-of-covered-indices%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[3955 - Valid Binary Strings With Cost Limit](https://leetcode.com/problems/valid-binary-strings-with-cost-limit)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](cpp%2F3955-valid-binary-strings-with-cost-limit%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[3953 - Maximum Score with Co-Prime Element](https://leetcode.com/problems/maximum-score-with-co-prime-element)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>[✔️](cpp%2F3953-maximum-score-with-co-prime-element%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-
-### Contest
-
-<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>Python</sub> | <sub>Rust</sub>
----- | ---- | ---- | ---- | ---- | ----
-<sub>[3954 - Sum of Compatible Numbers in Range I](https://leetcode.com/problems/sum-of-compatible-numbers-in-range-i)</sub> | <sub>🟢 Easy</sub> | <sub><div align='center'>[✔️](cpp%2F3954-sum-of-compatible-numbers-in-range-i%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[3955 - Valid Binary Strings With Cost Limit](https://leetcode.com/problems/valid-binary-strings-with-cost-limit)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](cpp%2F3955-valid-binary-strings-with-cost-limit%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[3956 - Maximum Sum of M Non-Overlapping Subarrays I](https://leetcode.com/problems/maximum-sum-of-m-non-overlapping-subarrays-i)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>[✔️](cpp%2F3956-maximum-sum-of-m-non-overlapping-subarrays-i%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[3957 - Maximum Sum of M Non-Overlapping Subarrays II](https://leetcode.com/problems/maximum-sum-of-m-non-overlapping-subarrays-ii)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>[✔️](cpp%2F3957-maximum-sum-of-m-non-overlapping-subarrays-ii%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[3956 - Maximum Sum of M Non-Overlapping Subarrays I](https://leetcode.com/problems/maximum-sum-of-m-non-overlapping-subarrays-i)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>[✔️](cpp%2F3956-maximum-sum-of-m-non-overlapping-subarrays-i%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[3957 - Maximum Sum of M Non-Overlapping Subarrays II](https://leetcode.com/problems/maximum-sum-of-m-non-overlapping-subarrays-ii)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>[✔️](cpp%2F3957-maximum-sum-of-m-non-overlapping-subarrays-ii%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 
 
