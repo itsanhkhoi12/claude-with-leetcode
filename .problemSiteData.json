@@ -191,6 +191,31 @@
     "cpp": true
   },
   {
+    "problem": "Debounce",
+    "pattern": "Contest",
+    "difficulty": "Medium",
+    "link": "debounce",
+    "code": "2627",
+    "javascript": true,
+    "typescript": true
+  },
+  {
+    "problem": "Add Two Promises",
+    "pattern": "Contest",
+    "difficulty": "Easy",
+    "link": "add-two-promises",
+    "code": "2723",
+    "typescript": true
+  },
+  {
+    "problem": "Minimum Operations to Make Array Sum Divisible by K",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "minimum-operations-to-make-array-sum-divisible-by-k",
+    "code": "3512",
+    "cpp": true
+  },
+  {
     "problem": "Earliest Finish Time for Land and Water Rides I",
     "pattern": "Array",
     "difficulty": "Easy",
@@ -236,6 +261,14 @@
     "difficulty": "Easy",
     "link": "find-the-degree-of-each-vertex",
     "code": "3898",
+    "cpp": true
+  },
+  {
+    "problem": "Concatenate Array With Reverse",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "concatenate-array-with-reverse",
+    "code": "3925",
     "cpp": true
   },
   {
