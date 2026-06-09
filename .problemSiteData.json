@@ -207,6 +207,14 @@
     "cpp": true
   },
   {
+    "problem": "Maximum Total Subarray Value I",
+    "pattern": "Array",
+    "difficulty": "Medium",
+    "link": "maximum-total-subarray-value-i",
+    "code": "3689",
+    "cpp": true
+  },
+  {
     "problem": "Total Waviness of Numbers in Range I",
     "pattern": "Math",
     "difficulty": "Medium",
@@ -220,6 +228,14 @@
     "difficulty": "Hard",
     "link": "total-waviness-of-numbers-in-range-ii",
     "code": "3753",
+    "cpp": true
+  },
+  {
+    "problem": "Find the Degree of Each Vertex",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "find-the-degree-of-each-vertex",
+    "code": "3898",
     "cpp": true
   },
   {
