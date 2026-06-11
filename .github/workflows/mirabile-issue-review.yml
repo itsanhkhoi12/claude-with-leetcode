@@ -8,7 +8,7 @@ on:
 
 jobs:
     review:
-        if: |
+        if: >-
             github.actor != 'mirabile[bot]' &&
             (
               (github.event_name == 'issue_comment' &&

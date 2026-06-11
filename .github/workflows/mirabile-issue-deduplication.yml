@@ -18,7 +18,15 @@ on:
 jobs:
     deduplicate:
         runs-on: ubuntu-latest
-        if: ${{ github.repository == 'Stewie-pixel/claude-with-leetcode' }}
+        if: >-
+            github.repository == 'Stewie-pixel/claude-with-leetcode' &&
+            github.actor != 'mirabile[bot]' &&
+            (
+              github.event_name == 'issues' ||
+              github.event_name == 'workflow_dispatch' ||
+              (github.event_name == 'issue_comment' &&
+               github.event.comment.user.login != 'mirabile[bot]')
+            )
 
         permissions:
             issues: write
