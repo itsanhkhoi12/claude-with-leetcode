@@ -304,6 +304,14 @@
     "cpp": true
   },
   {
+    "problem": "Weighted Word Mapping",
+    "pattern": "Array",
+    "difficulty": "Easy",
+    "link": "weighted-word-mapping",
+    "code": "3838",
+    "cpp": true
+  },
+  {
     "problem": "Find the Degree of Each Vertex",
     "pattern": "Array",
     "difficulty": "Easy",
