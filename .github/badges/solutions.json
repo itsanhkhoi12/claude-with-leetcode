@@ -135,6 +135,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3753-total-waviness-of-numbers-in-range-ii/ANALYSIS.md"
   },
   {
+    "slug": "3838-weighted-word-mapping",
+    "title": "Arrays & Hashing",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3838-weighted-word-mapping/ANALYSIS.md"
+  },
+  {
     "slug": "3898-find-the-degree-of-each-vertex",
     "title": "Find the Degree of Each Vertex",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3898-find-the-degree-of-each-vertex/ANALYSIS.md"
@@ -190,6 +195,11 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/93-restore-ip-addresses/ANALYSIS.md"
   },
   {
+    "slug": "138-copy-list-with-random-pointer",
+    "title": "Linked List",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/java/138-copy-list-with-random-pointer/ANALYSIS.md"
+  },
+  {
     "slug": "141-linked-list-cycle",
     "title": "Fast & Slow Pointers  ",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/java/141-linked-list-cycle/ANALYSIS.md"
@@ -228,6 +238,11 @@
     "slug": "3559-number-of-ways-to-assign-edge-weights-ii",
     "title": "Lowest Common Ancestor (Binary Lifting)",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/python/3559-number-of-ways-to-assign-edge-weights-ii/ANALYSIS.md"
+  },
+  {
+    "slug": "94-binary-tree-inorder-traversal",
+    "title": "Tree DFS - Inorder Traversal",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/rust/94-binary-tree-inorder-traversal/ANALYSIS.md"
   },
   {
     "slug": "2723-add-two-promises",
