@@ -161,9 +161,9 @@ function createProblemsObj(data) {
             : ['Contest'];
 
         for (const topic of topics) {
-            if (!(pattern in obj)) obj[pattern] = {};
-            if (!(difficulty in obj[pattern])) obj[pattern][difficulty] = [];
-            obj[pattern][difficulty].push({
+            if (!(topic in obj)) obj[topic] = {};
+            if (!(difficulty in obj[topic])) obj[topic][difficulty] = [];
+            obj[topic][difficulty].push({
                 name: problem,
                 url: 'https://leetcode.com/problems/' + link,
                 code: code.slice(0, 4),
@@ -189,7 +189,9 @@ const tableSep =
 
 let completionTable = '';
 
-for (const topic in PROBLEMS_OBJ) {
+const sortedTopics = Object.keys(PROBLEMS_OBJ).sort();
+
+for (const topic of sortedTopics) {
     completionTable += `### ${topic}\n\n`;
     completionTable += tableHeader;
     completionTable += tableSep;
@@ -208,13 +210,13 @@ for (const topic in PROBLEMS_OBJ) {
                     const normalizedPath = file.replace(/\\/g, '/');
                     const parts = normalizedPath.split('/');
                     const parentFolder = parts[parts.length - 2] || '';
-                    const strippedCode = parseInt(code).toString(); // 0001 → 1
+                    const strippedCode = parseInt(code).toString();
 
                     return (
-                        parentFolder.startsWith(`${code}-`) || // 0001-two-sum
-                        parentFolder.startsWith(`${strippedCode}-`) || // 1-two-sum
-                        parentFolder === code || // 0001
-                        parentFolder === strippedCode // 1
+                        parentFolder.startsWith(`${code}-`) ||
+                        parentFolder.startsWith(`${strippedCode}-`) ||
+                        parentFolder === code ||
+                        parentFolder === strippedCode
                     );
                 });
 

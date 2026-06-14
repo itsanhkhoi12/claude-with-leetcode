@@ -13,6 +13,12 @@ A little assistant from Claude to help you learn daily LeetCode problems organis
 
 </div>
 
+## 🎬 Demo
+
+<img src="/assets/demo.png" width="100%" alt="Demo" />
+
+<img src="/docs/all-leetcode-solutions.png" width="100%" alt="Mermaid Diagram" />
+
 ## 📊 GitHub Stats
 
 <div align="center">
@@ -21,12 +27,7 @@ A little assistant from Claude to help you learn daily LeetCode problems organis
 
 </div>
 
-## 🎬 Demo
-
-![Demo](/assets/demo.png)
-![Mermaid Diagram](/docs/all-leetcode-solutions.png)
-
-## Table of Contents
+## 💻 Table of Contents
 
 - [Features](#-features)
 - [Roadmap](#-roadmap)
