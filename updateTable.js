@@ -5,55 +5,111 @@ const path = require('path');
 const IGNORE_DIRS = ['.github', '.git', '.idea', '.vscode', 'node_modules'];
 
 const FOLDER_TO_LANG = {
-    javascript: { label: 'JavaScript', color: 'f7df1e',  logo: 'javascript',  logoColor: '000000' },
-    typescript: { label: 'TypeScript', color: '3178c6',  logo: 'typescript',  logoColor: 'ffffff' },
-    csharp:     { label: 'C%23',       color: '239120',  logo: 'csharp',      logoColor: 'ffffff' },
-    c:          { label: 'C',          color: 'a8b9cc',  logo: 'c',           logoColor: '000000' },
-    go:         { label: 'Go',         color: '00add8',  logo: 'go',          logoColor: 'ffffff' },
-    java:       { label: 'Java',       color: 'ed8b00',  logo: 'openjdk',     logoColor: 'ffffff' },
-    python:     { label: 'Python',     color: '3776ab',  logo: 'python',      logoColor: 'ffffff' },
-    ruby:       { label: 'Ruby',       color: 'cc342d',  logo: 'ruby',        logoColor: 'ffffff' },
-    rust:       { label: 'Rust',       color: '000000',  logo: 'rust',        logoColor: 'ffffff' },
-    scala:      { label: 'Scala',      color: 'dc322f',  logo: 'scala',       logoColor: 'ffffff' },
-    swift:      { label: 'Swift',      color: 'fa7343',  logo: 'swift',       logoColor: 'ffffff' },
-    cpp:        { label: 'C%2B%2B',    color: '00599c',  logo: 'cplusplus',   logoColor: 'ffffff' },
-    kotlin:     { label: 'Kotlin',     color: '7f52ff',  logo: 'kotlin',      logoColor: 'ffffff' },
-    dart:       { label: 'Dart',       color: '0175c2',  logo: 'dart',        logoColor: 'ffffff' },
+    javascript: {
+        label: 'JavaScript',
+        color: 'f7df1e',
+        logo: 'javascript',
+        logoColor: '000000',
+    },
+    typescript: {
+        label: 'TypeScript',
+        color: '3178c6',
+        logo: 'typescript',
+        logoColor: 'ffffff',
+    },
+    csharp: {
+        label: 'C%23',
+        color: '239120',
+        logo: 'csharp',
+        logoColor: 'ffffff',
+    },
+    c: { label: 'C', color: 'a8b9cc', logo: 'c', logoColor: '000000' },
+    go: { label: 'Go', color: '00add8', logo: 'go', logoColor: 'ffffff' },
+    java: {
+        label: 'Java',
+        color: 'ed8b00',
+        logo: 'openjdk',
+        logoColor: 'ffffff',
+    },
+    python: {
+        label: 'Python',
+        color: '3776ab',
+        logo: 'python',
+        logoColor: 'ffffff',
+    },
+    ruby: { label: 'Ruby', color: 'cc342d', logo: 'ruby', logoColor: 'ffffff' },
+    rust: { label: 'Rust', color: '000000', logo: 'rust', logoColor: 'ffffff' },
+    scala: {
+        label: 'Scala',
+        color: 'dc322f',
+        logo: 'scala',
+        logoColor: 'ffffff',
+    },
+    swift: {
+        label: 'Swift',
+        color: 'fa7343',
+        logo: 'swift',
+        logoColor: 'ffffff',
+    },
+    cpp: {
+        label: 'C%2B%2B',
+        color: '00599c',
+        logo: 'cplusplus',
+        logoColor: 'ffffff',
+    },
+    kotlin: {
+        label: 'Kotlin',
+        color: '7f52ff',
+        logo: 'kotlin',
+        logoColor: 'ffffff',
+    },
+    dart: { label: 'Dart', color: '0175c2', logo: 'dart', logoColor: 'ffffff' },
 };
 
 const FOLDER_TO_DISPLAY = {
     javascript: 'JS',
     typescript: 'TS',
-    csharp:     'C#',
-    c:          'C',
-    go:         'GO',
-    java:       'Java',
-    python:     'Python',
-    ruby:       'Ruby',
-    rust:       'Rust',
-    scala:      'Scala',
-    swift:      'Swift',
-    cpp:        'C++',
-    kotlin:     'Kotlin',
-    dart:       'Dart',
+    csharp: 'C#',
+    c: 'C',
+    go: 'GO',
+    java: 'Java',
+    python: 'Python',
+    ruby: 'Ruby',
+    rust: 'Rust',
+    scala: 'Scala',
+    swift: 'Swift',
+    cpp: 'C++',
+    kotlin: 'Kotlin',
+    dart: 'Dart',
 };
 
 const VALID_DIRS = new Set([
-    'c', 'cpp', 'csharp', 'java', 'python',
-    'javascript', 'typescript', 'go', 'ruby',
-    'swift', 'kotlin', 'rust', 'scala', 'dart'
+    'c',
+    'cpp',
+    'csharp',
+    'java',
+    'python',
+    'javascript',
+    'typescript',
+    'go',
+    'ruby',
+    'swift',
+    'kotlin',
+    'rust',
+    'scala',
+    'dart',
 ]);
 
 const DIFFICULTY_ORDER = ['Easy', 'Medium', 'Hard'];
 const DIFFICULTY_BADGE = {
-    Easy:   '🟢 Easy',
+    Easy: '🟢 Easy',
     Medium: '🟡 Medium',
-    Hard:   '🔴 Hard',
+    Hard: '🔴 Hard',
 };
 
-const PREPEND_PATH  = process.argv[2] || './';
+const PREPEND_PATH = process.argv[2] || './';
 const TEMPLATE_PATH = process.argv[3] || './README_template.md';
-const WRITE_PATH    = process.argv[4] || './README.md';
+const WRITE_PATH = process.argv[4] || './README.md';
 
 const PROBLEM_SITE_DATA = JSON.parse(
     fs.readFileSync('./.problemSiteData.json', 'utf8'),
@@ -100,13 +156,19 @@ const nestedFilesInDir = directories.reduce((acc, dir) => {
 function createProblemsObj(data) {
     const obj = {};
     for (const { problem, pattern, difficulty, link, code } of data) {
-        if (!(pattern in obj)) obj[pattern] = {};
-        if (!(difficulty in obj[pattern])) obj[pattern][difficulty] = [];
-        obj[pattern][difficulty].push({
-            name: problem,
-            url: 'https://leetcode.com/problems/' + link,
-            code: code.slice(0, 4),
-        });
+        const topics = pattern
+            ? pattern.split(',').map((t) => t.trim())
+            : ['Contest'];
+
+        for (const topic of topics) {
+            if (!(pattern in obj)) obj[pattern] = {};
+            if (!(difficulty in obj[pattern])) obj[pattern][difficulty] = [];
+            obj[pattern][difficulty].push({
+                name: problem,
+                url: 'https://leetcode.com/problems/' + link,
+                code: code.slice(0, 4),
+            });
+        }
     }
     return obj;
 }
@@ -147,15 +209,15 @@ for (const topic in PROBLEMS_OBJ) {
                     const parts = normalizedPath.split('/');
                     const parentFolder = parts[parts.length - 2] || '';
                     const strippedCode = parseInt(code).toString(); // 0001 → 1
-            
+
                     return (
-                        parentFolder.startsWith(`${code}-`)        || // 0001-two-sum
+                        parentFolder.startsWith(`${code}-`) || // 0001-two-sum
                         parentFolder.startsWith(`${strippedCode}-`) || // 1-two-sum
-                        parentFolder === code                        || // 0001
-                        parentFolder === strippedCode                   // 1
+                        parentFolder === code || // 0001
+                        parentFolder === strippedCode // 1
                     );
                 });
-            
+
                 row.push(
                     filePath
                         ? `<sub><div align='center'>[✔️](${encodeURIComponent(filePath)})</div></sub>`
@@ -177,4 +239,6 @@ const toWrite = template
     .replaceAll('<language-badges />', generateLanguageBadges(directories));
 
 fs.writeFileSync(WRITE_PATH, toWrite, { encoding: 'utf8' });
-console.log(`README updated — ${directories.length} languages detected: ${directories.join(', ')}`);
+console.log(
+    `README updated — ${directories.length} languages detected: ${directories.join(', ')}`,
+);
