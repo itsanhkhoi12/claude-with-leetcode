@@ -27,8 +27,6 @@ Solutions are also welcome for any other _supported_ language on leetcode.com!
 
 <img src="/assets/demo.png" width="100%" alt="Demo" />
 
-<img src="/docs/all-leetcode-solutions.png" width="100%" alt="Mermaid Diagram" />
-
 ## 📊 GitHub Stats
 
 <div align="center">
