@@ -19,6 +19,12 @@ A little assistant from Claude to help you learn daily LeetCode problems organis
 
 </div>
 
+## 🎬 Demo
+
+<img src="/assets/demo.png" width="100%" alt="Demo" />
+
+<img src="/docs/all-leetcode-solutions.png" width="100%" alt="Mermaid Diagram" />
+
 ## 📊 GitHub Stats
 
 <div align="center">
@@ -27,12 +33,7 @@ A little assistant from Claude to help you learn daily LeetCode problems organis
 
 </div>
 
-## 🎬 Demo
-
-![Demo](/assets/demo.png)
-![Mermaid Diagram](/docs/all-leetcode-solutions.png)
-
-## Table of Contents
+## 💻 Table of Contents
 
 - [Features](#-features)
 - [Roadmap](#-roadmap)
@@ -108,34 +109,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## ⚡ Problem List
 
-### Arrays & Hashing
-
-<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
----- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
-<sub>[0001 - Two Sum](https://leetcode.com/problems/two-sum)</sub> | <sub>🟢 Easy</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1-two-sum%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](python%2F1-two-sum%2FREADME.md)</div></sub> | <sub><div align='center'>[✔️](rust%2F1-two-sum%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub>
-
-### Linked List
-
-<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
----- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
-<sub>[0021 - Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)</sub> | <sub>🟢 Easy</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F21-merge-two-sorted-lists%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[0002 - Add Two Numbers](https://leetcode.com/problems/add-two-numbers)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](c%2F2-add-two-numbers%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](java%2F2-add-two-numbers%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-
-### String
-
-<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
----- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
-<sub>[0006 - Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F6-zigzag-conversion%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[0093 - Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F93-restore-ip-addresses%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[0394 - Decode String](https://leetcode.com/problems/decode-string)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F394-decode-string%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[1415 - The k-th Lexicographical String of All Happy Strings of Length n](https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[1456 - Maximum Number of Vowels in a Substring of Given Length](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1456-maximum-number-of-vowels-in-a-substring-of-given-length%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[1545 - Find Kth Bit in Nth Binary String](https://leetcode.com/problems/find-kth-bit-in-nth-binary-string)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1545-find-kth-bit-in-nth-binary-string%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[2390 - Removing Stars From a String](https://leetcode.com/problems/removing-stars-from-a-string)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F2390-removing-stars-from-a-string%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[0214 - Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F214-shortest-palindrome%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[1392 - Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1392-longest-happy-prefix%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[2223 - Sum of Scores of Built Strings](https://leetcode.com/problems/sum-of-scores-of-built-strings)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F2223-sum-of-scores-of-built-strings%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-
 ### Array
 
 <sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
@@ -160,27 +133,17 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <sub>[3559 - Number of Ways to Assign Edge Weights II](https://leetcode.com/problems/number-of-ways-to-assign-edge-weights-ii)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](python%2F3559-number-of-ways-to-assign-edge-weights-ii%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[3691 - Maximum Total Subarray Value II](https://leetcode.com/problems/maximum-total-subarray-value-ii)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F3691-maximum-total-subarray-value-ii%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 
+### Arrays & Hashing
+
+<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
+---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
+<sub>[0001 - Two Sum](https://leetcode.com/problems/two-sum)</sub> | <sub>🟢 Easy</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1-two-sum%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](python%2F1-two-sum%2FREADME.md)</div></sub> | <sub><div align='center'>[✔️](rust%2F1-two-sum%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub>
+
 ### Backtracking
 
 <sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
 ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
 <sub>[0077 - Combinations](https://leetcode.com/problems/combinations)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F77-combinations%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-
-### Hash Table
-
-<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
----- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
-<sub>[0424 - Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F424-longest-repeating-character-replacement%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[1358 - Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1358-number-of-substrings-containing-all-three-characters%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[1657 - Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1657-determine-if-two-strings-are-close%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](python%2F1657-determine-if-two-strings-are-close%2FANALYSIS.md)</div></sub> | <sub><div align='center'>[✔️](rust%2F1657-determine-if-two-strings-are-close%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub>
-
-### Linked List, Two Pointers, Stack
-
-<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
----- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
-<sub>[2130 - Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F2130-maximum-twin-sum-of-a-linked-list%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[2130 - Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F2130-maximum-twin-sum-of-a-linked-list%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
-<sub>[2130 - Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F2130-maximum-twin-sum-of-a-linked-list%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 
 ### Contest
 
@@ -198,6 +161,22 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <sub>[3956 - Maximum Sum of M Non-Overlapping Subarrays I](https://leetcode.com/problems/maximum-sum-of-m-non-overlapping-subarrays-i)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F3956-maximum-sum-of-m-non-overlapping-subarrays-i%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[3957 - Maximum Sum of M Non-Overlapping Subarrays II](https://leetcode.com/problems/maximum-sum-of-m-non-overlapping-subarrays-ii)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F3957-maximum-sum-of-m-non-overlapping-subarrays-ii%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 
+### Hash Table
+
+<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
+---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
+<sub>[0424 - Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F424-longest-repeating-character-replacement%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[1358 - Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1358-number-of-substrings-containing-all-three-characters%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[1657 - Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1657-determine-if-two-strings-are-close%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](python%2F1657-determine-if-two-strings-are-close%2FANALYSIS.md)</div></sub> | <sub><div align='center'>[✔️](rust%2F1657-determine-if-two-strings-are-close%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub>
+
+### Linked List
+
+<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
+---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
+<sub>[0021 - Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)</sub> | <sub>🟢 Easy</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F21-merge-two-sorted-lists%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[0002 - Add Two Numbers](https://leetcode.com/problems/add-two-numbers)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>[✔️](c%2F2-add-two-numbers%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](java%2F2-add-two-numbers%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[2130 - Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F2130-maximum-twin-sum-of-a-linked-list%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+
 ### Math
 
 <sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
@@ -205,5 +184,32 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <sub>[3558 - Number of Ways to Assign Edge Weights I](https://leetcode.com/problems/number-of-ways-to-assign-edge-weights-i)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](python%2F3558-number-of-ways-to-assign-edge-weights-i%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[3751 - Total Waviness of Numbers in Range I](https://leetcode.com/problems/total-waviness-of-numbers-in-range-i)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F3751-total-waviness-of-numbers-in-range-i%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 <sub>[3753 - Total Waviness of Numbers in Range II](https://leetcode.com/problems/total-waviness-of-numbers-in-range-ii)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F3753-total-waviness-of-numbers-in-range-ii%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+
+### Stack
+
+<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
+---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
+<sub>[2130 - Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F2130-maximum-twin-sum-of-a-linked-list%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+
+### String
+
+<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
+---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
+<sub>[0006 - Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F6-zigzag-conversion%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[0093 - Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F93-restore-ip-addresses%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[0394 - Decode String](https://leetcode.com/problems/decode-string)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F394-decode-string%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[1415 - The k-th Lexicographical String of All Happy Strings of Length n](https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[1456 - Maximum Number of Vowels in a Substring of Given Length](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1456-maximum-number-of-vowels-in-a-substring-of-given-length%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[1545 - Find Kth Bit in Nth Binary String](https://leetcode.com/problems/find-kth-bit-in-nth-binary-string)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1545-find-kth-bit-in-nth-binary-string%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[2390 - Removing Stars From a String](https://leetcode.com/problems/removing-stars-from-a-string)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F2390-removing-stars-from-a-string%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[0214 - Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F214-shortest-palindrome%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[1392 - Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1392-longest-happy-prefix%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[2223 - Sum of Scores of Built Strings](https://leetcode.com/problems/sum-of-scores-of-built-strings)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F2223-sum-of-scores-of-built-strings%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+
+### Two Pointers
+
+<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Python</sub> | <sub>Rust</sub> | <sub>TS</sub>
+---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
+<sub>[2130 - Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)</sub> | <sub>🟡 Medium</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F2130-maximum-twin-sum-of-a-linked-list%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 
 
