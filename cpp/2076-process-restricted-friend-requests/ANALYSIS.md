@@ -1,4 +1,4 @@
-# Union Find (Disjoint Set Union)
+# Union‑Find (Disjoint Set Union)
 
 ## Video Solution
 
@@ -6,348 +6,358 @@ For more details about **Process Restricted Friend Requests**, watch the walkthr
 
 ## Concept
 
-Union Find (also called Disjoint Set Union, DSU) is a data structure that keeps track of a partition of a set into disjoint subsets. It supports two main operations efficiently:
+Union‑Find (also called Disjoint Set Union, DSU) maintains a collection of disjoint sets and supports two operations efficiently:
 
-* **Find(x)** – returns the representative (root) of the set containing `x`. With path compression, this runs in nearly‑constant amortized time.
-* **Union(x, y)** – merges the sets containing `x` and `y`. Using union by rank/size keeps the tree shallow.
+* **find(x)** – returns the representative (root) of the set containing *x*.
+* **union(x, y)** – merges the sets containing *x* and *y*.
 
-In the *Process Restricted Friend Requests* problem we need to know, for each friend request, whether merging the two people's groups would put any restricted pair into the same group. Union Find lets us maintain the current friendship groups incrementally as we process requests in order.
+With path compression and union by rank (or size) both operations run in almost‑constant amortized time ≈ O(α(n)), where α is the inverse Ackermann function.
+
+In this problem we cannot freely union two people if doing so would make any restricted pair end up in the same component. The trick is to keep, for each component, the set of other components it is *restricted* to. Before merging two components we check whether their restriction sets intersect; if they do, the request must be rejected.
 
 ## When to Use It
 
-Use Union Find when you see:
+Use Union‑Find when you need to handle **dynamic connectivity** queries (are two nodes in the same component?) together with **updates that merge components**. Typical clues:
 
-* Incremental connectivity queries (“are these two nodes connected?”) as edges are added.
-* Need to merge sets and answer connectivity repeatedly.
-* Problems about friend circles, social networks, number of islands, etc., where relationships are built over time.
-* Constraints up to ~10⁵ elements where near‑O(1) per operation is required.
+* “friend request”, “network”, “connected components”, “merge groups”.
+* There are **constraints that forbid certain merges** (e.g., restricted pairs, enemies, incompatible items).
+* Queries are processed **online** (in given order) and earlier merges affect later ones.
+
+If the problem only asks about static connectivity after all edges are added, a simple DFS/BFS suffices. When merges happen interleaved with queries, Union‑Find is the go‑to technique.
 
 ## Template
+
+Below is a minimal DSU skeleton with path compression and union by rank. In the lecture we extend it with a `restriction_set` per root.
 
 ```python
 class DSU:
     def __init__(self, n):
         self.parent = list(range(n))
-        self.rank   = [0] * n          # or size[] for union by size
+        self.rank   = [0] * n
+        # each component starts with an empty restriction set
+        self.restricted = [set() for _ in range(n)]
 
     def find(self, x):
-        # Path compression
         if self.parent[x] != x:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
 
     def union(self, x, y):
-        px, py = self.find(x), self.find(y)
-        if px == py:
-            return False                 # already in same set
-        # Union by rank
-        if self.rank[px] < self.rank[py]:
-            px, py = py, px
-        self.parent[py] = px
-        if self.rank[px] == self.rank[py]:
-            self.rank[px] += 1
+        xr, yr = self.find(x), self.find(y)
+        if xr == yr:
+            return False               # already together
+        # union by rank
+        if self.rank[xr] < self.rank[yr]:
+            xr, yr = yr, xr
+        self.parent[yr] = xr
+        if self.rank[xr] == self.rank[yr]:
+            self.rank[xr] += 1
+        # merge restriction sets (small‑to‑large)
+        if len(self.restricted[xr]) < len(self.restricted[yr]):
+            xr, yr = yr, xr
+        self.restricted[xr].update(self.restricted[yr])
+        self.restricted[yr].clear()
         return True
 ```
 
 ## LeetCode Problem Walkthrough
 
 ### Problem: 2076. Process Restricted Friend Requests
-
 https://leetcode.com/problems/process-restricted-friend-requests/
 
-### Approach 1: Brute Force (Check connectivity after each tentative union)
-
-**Algorithm**
-1. For each request `(u, v)`:
-   * Temporarily add the edge `(u, v)` to a copy of the current graph.
-   * Run DFS/BFS from every node to label its component.
-   * Scan all restrictions; if any restricted pair ends up in the same component, the request fails.
-   * If it succeeds, permanently add the edge to the real graph.
-2. Return the boolean list of results.
-
-**Implementation**
-
-```python
-from collections import deque
-
-class Solution:
-    def friendRequests(self, n, restrictions, requests):
-        adj = [[] for _ in range(n)]          # current friendship graph
-        ans = []
-
-        def bfs(start):
-            """Return list of nodes in the component containing start."""
-            q = deque([start])
-            seen = {start}
-            while q:
-                cur = q.popleft()
-                for nb in adj[cur]:
-                    if nb not in seen:
-                        seen.add(nb)
-                        q.append(nb)
-            return list(seen)
-
-        for u, v in requests:
-            # try adding edge
-            adj[u].append(v)
-            adj[v].append(u)
-
-            # compute components
-            comp_id = [-1] * n
-            comp_cnt = 0
-            for i in range(n):
-                if comp_id[i] == -1:
-                    # label this component
-                    nodes = bfs(i)
-                    for node in nodes:
-                        comp_id[node] = comp_cnt
-                    comp_cnt += 1
-
-            # check restrictions
-            ok = True
-            for a, b in restrictions:
-                if comp_id[a] == comp_id[b]:
-                    ok = False
-                    break
-
-            if ok:
-                ans.append(True)          # keep the edge
-            else:
-                ans.append(False)         # reject, remove the temporary edge
-                adj[u].pop()
-                adj[v].pop()
-        return ans
-```
-
-**Complexity Analysis**
-* Time: For each request we run BFS from every unvisited node → **O(n + E)** per request, where `E` ≤ requests processed so far. In the worst case `O(requests * (n + requests))`. With `n, requests ≤ 1000` this is ≤ ≈ 2 × 10⁶ operations.
-* Space: **O(n + E)** for the adjacency list and auxiliary arrays.
-
 ---
 
-### Approach 2: Union Find + Restriction Scan (the submitted solution)
-
-**Intuition**
-Instead of rebuilding components from scratch, we maintain them incrementally with a DSU. For a request `(u, v)` we only need to know whether merging the two current components would connect any restricted pair. If we look at each restriction `(x, y)` and check the current roots of `x` and `y`, the request is blocked exactly when one root equals `find(u)` and the other equals `find(v)` (in either order).
+### Approach 1: Brute Force – Copy DSU per Request
 
 **Algorithm**
-1. Initialise DSU with `n` singleton sets.
-2. For each request `(u, v)`:
-   * If `find(u) == find(v)`, they are already friends → request succeeds.
-   * Otherwise, iterate through all restrictions:
-        * Let `rx = find(x)`, `ry = find(y)`.
-        * If `(rx == ru and ry == rv)` or `(rx == rv and ry == ru)`, the union would violate that restriction → block.
-   * If no restriction blocks, perform `union(u, v)` and record success.
-3. Return the boolean list.
+For each friend request `[u, v]`:
+1. If `u` and `v` are already in the same component → request succeeds.
+2. Otherwise, **temporarily** unite their components in a copy of the DSU.
+3. Scan every restriction `[a, b]`; if `find(a) == find(b)` in the copied DSU, the union would create a forbidden connection → reject.
+4. If no restriction is violated, apply the union to the real DSU and mark the request as successful.
 
 **Implementation**
-
 ```python
+from typing import List
+
 class Solution:
-    def friendRequests(self, n, restrictions, requests):
+    def friendRequests(self, n: int,
+                       restrictions: List[List[int]],
+                       requests: List[List[int]]) -> List[bool]:
+        # basic DSU without restriction tracking
         parent = list(range(n))
         rank   = [0] * n
 
         def find(x):
-            if parent[x] != x:
-                parent[x] = find(parent[x])
-            return parent[x]
-
-        def union(x, y):
-            px, py = find(x), find(y)
-            if px == py:
-                return
-            if rank[px] < rank[py]:
-                px, py = py, px
-            parent[py] = px
-            if rank[px] == rank[py]:
-                rank[px] += 1
-
-        ans = []
-        for u, v in requests:
-            ru, rv = find(u), find(v)
-            if ru == rv:
-                ans.append(True)
-                continue
-
-            blocked = False
-            for x, y in restrictions:
-                rx, ry = find(x), find(y)
-                if (rx == ru and ry == rv) or (rx == rv and ry == ru):
-                    blocked = True
-                    break
-
-            if not blocked:
-                union(ru, rv)
-                ans.append(True)
-            else:
-                ans.append(False)
-        return ans
-```
-
-**Complexity Analysis**
-* Time: Each request scans all restrictions → **O(requests × restrictions × α(n))**. With the given limits (≤ 1000 each) this is about 10⁶ operations.
-* Space: **O(n)** for the DSU arrays.
-
----
-
-### Approach 3: Union Find + Restriction Sets per Component (most optimal)
-
-**Intuition**
-Scanning every restriction for every request can be wasteful when many requests are processed but only few restrictions matter for a given component. We can store, for each component root, the set of other components it is restricted from (i.e., all nodes that appear in a restriction with any member of the component). When we consider merging two components `A` and `B`, the request is invalid iff `B` appears in `A`’s restriction set **or** `A` appears in `B`’s restriction set. After a successful union we merge the two restriction sets (using small‑to‑large to keep total work near linear).
-
-**Algorithm**
-1. DSU as before.
-2. `bad[root]` = set of component roots that are forbidden to merge with `root` because of at least one restriction.
-   * Initialise by iterating over all restrictions `(x, y)`:
-        * `rx = find(x)`, `ry = find(y)`.
-        * Add `ry` to `bad[rx]` and `rx` to `bad[ry]`.
-3. For each request `(u, v)`:
-   * `ru = find(u)`, `rv = find(v)`. If equal → success.
-   * If `rv` in `bad[ru]` (or symmetrically `ru` in `bad[rv]`) → block.
-   * Otherwise:
-        * Union `ru` and `rv` → new root `r`.
-        * Merge the restriction sets: attach the smaller set into the larger one (small‑to‑large).
-        * For each element `x` in the moved set, also add the new root `r` to `bad[x]` (because now any component restricted to `x` is also restricted to the merged component).
-        * Record success.
-4. Return results.
-
-**Implementation**
-
-```python
-class Solution:
-    def friendRequests(self, n, restrictions, requests):
-        parent = list(range(n))
-        rank   = [0] * n
-
-        def find(x):
-            if parent[x] != x:
-                parent[x] = find(parent[x])
-            return parent[x]
+            while parent[x] != x:
+                parent[x] = parent[parent[x]]
+                x = parent[x]
+            return x
 
         def union(x, y):
             xr, yr = find(x), find(y)
             if xr == yr:
-                return xr
+                return
             if rank[xr] < rank[yr]:
                 xr, yr = yr, xr
             parent[yr] = xr
             if rank[xr] == rank[yr]:
                 rank[xr] += 1
-            return xr
 
-        # restriction sets per current root
-        bad = [set() for _ in range(n)]
+        answer = []
+        for u, v in requests:
+            ru, rv = find(u), find(v)
+            if ru == rv:                     # already friends
+                answer.append(True)
+                continue
 
-        # initialise restrictions using initial singletons
+            # try union in a temporary copy
+            temp_parent = parent[:]
+            temp_rank   = rank[:]
+
+            def temp_find(x):
+                while temp_parent[x] != x:
+                    temp_parent[x] = temp_parent[temp_parent[x]]
+                    x = temp_parent[x]
+                return x
+
+            def temp_union(x, y):
+                xr, yr = temp_find(x), temp_find(y)
+                if xr == yr:
+                    return
+                if temp_rank[xr] < temp_rank[yr]:
+                    xr, yr = yr, xr
+                temp_parent[yr] = xr
+                if temp_rank[xr] == temp_rank[yr]:
+                    temp_rank[xr] += 1
+
+            temp_union(u, v)
+
+            blocked = False
+            for a, b in restrictions:
+                if temp_find(a) == temp_find(b):
+                    blocked = True
+                    break
+
+            if not blocked:
+                union(u, v)               # apply to real DSU
+                answer.append(True)
+            else:
+                answer.append(False)
+
+        return answer
+```
+
+**Complexity Analysis**
+*Time*: For each of `q` requests we copy the DSU (`O(n)`) and then scan all `r` restrictions, each `find` costing nearly O(1). → **O(q·(n + r))**.  
+*Space*: The DSU arrays plus a temporary copy → **O(n)**.
+
+---
+
+### Approach 2: Intermediate – Track Restriction Sets per Component (no small‑to‑large)
+
+**Intuition**
+Instead of copying the DSU for every request, we can answer the “would this union break any restriction?” question by looking at the *current* components. If we know, for each component, which other components it is restricted to, then merging `C_u` and `C_v` is safe **iff** there is **no** restriction linking a member of `C_u` to a member of `C_v`. This reduces the per‑request work to a set‑intersection test.
+
+**Algorithm**
+1. Initialise a DSU where each node also stores a `set` of restricted component roots.
+2. Populate those sets from the `restrictions` list: for each `[x, y]` add `find(y)` to the restriction set of `find(x)` and vice‑versa.
+3. For each request `[u, v]`:
+   * Find roots `ru`, `rv`. If equal → success.
+   * Check whether `rv` appears in `ru`’s restriction set **or** `ru` appears in `rv`’s set. If yes → request fails.
+   * Otherwise, union the two components and **merge** their restriction sets (union‑by‑size to keep it cheap).
+
+**Implementation**
+```python
+from typing import List, Set
+
+class Solution:
+    def friendRequests(self, n: int,
+                       restrictions: List[List[int]],
+                       requests: List[List[int]]) -> List[bool]:
+        parent = list(range(n))
+        rank   = [0] * n
+        # restriction_sets[root] = set of roots that this component cannot be united with
+        restriction_sets: List[Set[int]] = [set() for _ in range(n)]
+
+        def find(x):
+            while parent[x] != x:
+                parent[x] = parent[parent[x]]
+                x = parent[x]
+            return x
+
+        def union(x, y):
+            xr, yr = find(x), find(y)
+            if xr == yr:
+                return
+            # union by rank
+            if rank[xr] < rank[yr]:
+                xr, yr = yr, xr
+            parent[yr] = xr
+            if rank[xr] == rank[yr]:
+                rank[xr] += 1
+            # merge restriction sets (small‑to‑large)
+            if len(restriction_sets[xr]) < len(restriction_sets[yr]):
+                xr, yr = yr, xr
+            restriction_sets[xr].update(restriction_sets[yr])
+            restriction_sets[yr].clear()
+
+        # 1️⃣ Fill initial restriction information
         for a, b in restrictions:
             ra, rb = find(a), find(b)
-            bad[ra].add(rb)
-            bad[rb].add(ra)
+            if ra != rb:
+                restriction_sets[ra].add(rb)
+                restriction_sets[rb].add(ra)
 
-        ans = []
+        answer = []
+        for u, v in requests:
+            ru, rv = find(u), find(v)
+            if ru == rv:
+                answer.append(True)
+                continue
+
+            # 2️⃣ Check if merging would violate any restriction
+            if rv in restriction_sets[ru] or ru in restriction_sets[rv]:
+                answer.append(False)
+                continue
+
+            # 3️⃣ Safe to unite
+            union(u, v)
+            answer.append(True)
+
+        return answer
+```
+
+**Complexity Analysis**
+*Time*:
+  * Building initial restriction sets: O(r·α(n)).
+  * Each request: two `find` calls (≈ O(1)), a set‑lookup O(1), and a union that merges two restriction sets.  
+    Using union‑by‑size on the sets guarantees each restriction entry moves at most O(log n) times, giving an amortized O(α(n) + log n) per request.  
+    Overall **O((n + r + q)·α(n) + q·log n)**, which in practice is near‑linear.
+*Space*: O(n + r) for DSU arrays and restriction sets.
+
+---
+
+### Approach 3: Most Optimal – Union‑Find with Restriction Sets + Small‑to‑Large + Path Compression
+
+**Intuition**
+Approach 2 already gives near‑optimal performance. The final polish is to ensure:
+* **Path compression** in `find` (already present).
+* **Union by rank/size** for the DSU tree.
+* **Small‑to‑large merging** of the restriction sets so that each restriction entry is moved only O(log n) times over the whole sequence.
+These three tricks together give the classic **inverse‑Ackermann** amortized bound for DSU operations, making the algorithm essentially linear for the given constraints (n, r, q ≤ 1000).
+
+**Implementation**
+The code below is identical to Approach 2 but highlights the three optimizations in comments.
+
+```python
+from typing import List, Set
+
+class Solution:
+    def friendRequests(self, n: int,
+                       restrictions: List[List[int]],
+                       requests: List[List[int]]) -> List[bool]:
+        parent = list(range(n))
+        rank   = [0] * n
+        # restriction_sets[root] holds the roots this component is forbidden to merge with
+        restriction_sets: List[Set[int]] = [set() for _ in range(n)]
+
+        def find(x: int) -> int:
+            # ----> PATH COMPRESSION <----
+            if parent[x] != x:
+                parent[x] = find(parent[x])
+            return parent[x]
+
+        def union(x: int, y: int) -> None:
+            xr, yr = find(x), find(y)
+            if xr == yr:
+                return
+            # ----> UNION BY RANK <----
+            if rank[xr] < rank[yr]:
+                xr, yr = yr, xr
+            parent[yr] = xr
+            if rank[xr] == rank[yr]:
+                rank[xr] += 1
+            # ----> SMALL‑TO‑LARGE MERGE OF RESTRICTION SETS <----
+            if len(restriction_sets[xr]) < len(restriction_sets[yr]):
+                xr, yr = yr, xr
+            restriction_sets[xr].update(restriction_sets[yr])
+            restriction_sets[yr].clear()
+
+        # Populate initial restriction information
+        for a, b in restrictions:
+            ra, rb = find(a), find(b)
+            if ra != rb:
+                restriction_sets[ra].add(rb)
+                restriction_sets[rb].add(ra)
+
+        ans: List[bool] = []
         for u, v in requests:
             ru, rv = find(u), find(v)
             if ru == rv:
                 ans.append(True)
                 continue
 
-            # check if merging would violate a restriction
-            if rv in bad[ru] or ru in bad[rv]:
+            # If either side sees the other as restricted, request fails
+            if rv in restriction_sets[ru] or ru in restriction_sets[rv]:
                 ans.append(False)
                 continue
 
-            # perform union and merge restriction sets
-            new_root = union(ru, rv)
-
-            # small-to-large: ensure bad[new_root] is the larger set
-            if len(bad[ru]) < len(bad[rv]):
-                ru, rv = rv, ru   # now bad[ru] is larger
-
-            # move all restrictions from rv into ru
-            for forbidden in bad[rv]:
-                bad[ru].add(forbidden)
-                # the forbidden component now also sees the new root as restricted
-                bad[forbidden].add(new_root)
-            bad[rv].clear()   # optional cleanup
-
+            union(u, v)
             ans.append(True)
+
         return ans
 ```
 
 **Complexity Analysis**
-* Time:
-  * Building initial `bad` sets: O(restrictions × α(n)).
-  * Each request: two `find` calls → O(α(n)).
-  * Restriction‑set merge: each restriction entry moves at most O(log n) times because we always merge the smaller set into the larger one (small‑to‑large technique). Hence total work over all requests is O(restrictions × log n).
-  * Overall: **O((requests + restrictions) × α(n) + restrictions × log n)**, practically near‑linear.
-* Space: **O(n + restrictions)** for DSU plus the restriction sets.
+*Time*:  
+- `find` with path compression: **O(α(n))** amortized.  
+- `union` includes rank‑based tree merging (**O(1)**) and small‑to‑large set merging, which guarantees each restriction element moves at most **O(log n)** times.  
+- Overall **O((n + r + q)·α(n) + q·log n)** → practically linear for the limits (≤ 1000).  
+
+*Space*: **O(n + r)** for parent, rank, and restriction sets.
+
+---
 
 ### Provide a Visual Demonstration
 
 **Impact: HIGH** | **Category: explanation** | **Tags:** dry-run, trace, example
 
-We dry‑run the algorithm on Example 1:
+We walk through the first example to see how the algorithm decides.
 
-* `n = 3`
-* `restrictions = [[0,1]]`
-* `requests = [[0,2], [2,1]]`
+**Example 1**  
+`n = 3`  
+`restrictions = [[0, 1]]`  
+`requests = [[0, 2], [2, 1]]`
 
-**Initial state**
+#### Initialization
+- Each node is its own component: `{0}`, `{1}`, `{2}`.
+- Restriction sets:
+  - comp 0 → {1}
+  - comp 1 → {0}
+  - comp 2 → {}
 
-```
-parent = [0,1,2]
-rank   = [0,0,0]
-bad[0] = {1}
-bad[1] = {0}
-bad[2] = {}
-```
+#### Request 0: `[0, 2]`
+- `find(0) = 0`, `find(2) = 2` (different).
+- Check restrictions:
+  - Is `2` in set of `0`? No (`{1}`).
+  - Is `0` in set of `2`? No (`{}`).
+- Safe → union `0` and `2`.
+  - New component root = `0` (by rank).
+  - Merge restriction sets: `{0}` gets `{1}` ∪ `{}` = `{1}`.
+  - Component `{0,2}` now has restriction set `{1}`.
+- Result: **true**.
 
----
+#### Request 1: `[2, 1]`
+- `find(2)` → root `0` (since 2 united with 0).  
+  `find(1)` → root `1`.
+- Different components: `0` vs `1`.
+- Check restrictions:
+  - Is `1` in set of component `0`? **Yes** (`{1}`) → violation.
+  - (Symmetrically, `0` is in set of component `1` as well.)
+- Request fails → **false**.
+- No union performed.
 
-#### Request 0: (0, 2)
-
-```
-find(0) = 0, find(2) = 2   -> different
-Check restrictions:
-   bad[0] contains 2? No.
-   bad[2] contains 0? No.
-=> not blocked
-Union(0,2) -> new root 0 (rank[0] becomes 1)
-Merge restriction sets:
-   bad[2] is empty, nothing to move.
-   For each moved element (none) we also add new root to its set.
-Result:
-parent = [0,1,0]
-rank   = [1,0,0]
-bad[0] = {1}
-bad[1] = {0}
-bad[2] = {}   # (unused)
-ans = [True]
-```
+**Final answer**: `[true, false]`, matching the expected output.
 
 ---
-
-#### Request 1: (2, 1)
-
-```
-find(2) -> parent[2]=0, parent[0]=0 => 0
-find(1) = 1
-different roots (0 vs 1)
-Check restrictions:
-   bad[0] contains 1? Yes -> blocked
-=> request fails
-ans = [True, False]
-```
-
-Final answer `[true, false]` matches the expected output.
-
----
-
-### Summary
-
-* Start with a brute‑force BFS/DFS approach to grasp the problem.
-* Move to a straightforward Union Find that scans all restrictions per request (easy to implement, sufficient for the given limits).
-* For larger inputs, optimise by storing per‑component restriction sets and merging them with small‑to‑large, achieving near‑linear time.
-
-Use Union Find whenever you need to maintain dynamic connectivity under incremental edge additions, especially when additional constraints (like forbidden connections) must be checked efficiently.
