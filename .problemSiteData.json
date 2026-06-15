@@ -160,6 +160,14 @@
     "cpp": true
   },
   {
+    "problem": "Delete the Middle Node of a Linked List",
+    "pattern": "Linked List, Two Pointers",
+    "difficulty": "Medium",
+    "link": "delete-the-middle-node-of-a-linked-list",
+    "code": "2095",
+    "cpp": true
+  },
+  {
     "problem": "Maximum Twin Sum of a Linked List",
     "pattern": "Linked List, Two Pointers, Stack",
     "difficulty": "Medium",
