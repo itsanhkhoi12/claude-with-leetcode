@@ -71,6 +71,14 @@
     "cpp": true
   },
   {
+    "problem": "Reconstruct Itinerary",
+    "pattern": "Array, String, Depth-First Search, Graph Theory, Sorting, Heap (Priority Queue), Eulerian Circuit",
+    "difficulty": "Hard",
+    "link": "reconstruct-itinerary",
+    "code": "0332",
+    "cpp": true
+  },
+  {
     "problem": "Decode String",
     "pattern": "String",
     "difficulty": "Medium",
@@ -92,6 +100,18 @@
     "difficulty": "Easy",
     "link": "find-pivot-index",
     "code": "0724"
+  },
+  {
+    "problem": "Guess the Word",
+    "pattern": "Array, Math, String, Interactive, Game Theory",
+    "difficulty": "Hard",
+    "link": "guess-the-word",
+    "code": "0843",
+    "ruby": true,
+    "kotlin": true,
+    "go": true,
+    "csharp": true,
+    "cpp": true
   },
   {
     "problem": "Largest Component Size by Common Factor",
