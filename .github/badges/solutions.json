@@ -10,6 +10,16 @@
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/3-longest-substring-without-repeating-characters/ANALYSIS.md"
   },
   {
+    "slug": "4-median-of-two-sorted-arrays",
+    "title": "Binary Search",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/4-median-of-two-sorted-arrays/ANALYSIS.md"
+  },
+  {
+    "slug": "7-reverse-integer",
+    "title": "Math & Geometry",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/c/7-reverse-integer/ANALYSIS.md"
+  },
+  {
     "slug": "3950-exactly-one-consecutive-set-bits-pair",
     "title": "Bit Manipulation – Detecting Exactly One Consecutive Set‑Bits Pair",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/contest/biweekly/cpp/3950-exactly-one-consecutive-set-bits-pair/ANALYSIS.md"
@@ -148,6 +158,11 @@
     "slug": "3612-process-string-with-special-operations-i",
     "title": "Stack",
     "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3612-process-string-with-special-operations-i/ANALYSIS.md"
+  },
+  {
+    "slug": "3614-process-string-with-special-operations-ii",
+    "title": "Stack",
+    "url": "https://github.com/Stewie-pixel/claude-with-leetcode/blob/main/cpp/3614-process-string-with-special-operations-ii/ANALYSIS.md"
   },
   {
     "slug": "3635-earliest-finish-time-for-land-and-water-rides-ii",
