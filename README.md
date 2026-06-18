@@ -1,15 +1,14 @@
 <div align="center">
 
-<img src="./assets/cover.gif" height="350" width="100%" alt="DSA Mentor Banner" />
+<img src="./assets/cover.gif" height="300" width="100%" alt="DSA Mentor Banner" />
 
 # Claude with LeetCode
 
 [![LeetCode](https://img.shields.io/badge/LeetCode-Stewie--pixel-FFA116?logo=leetcode&logoColor=white)](https://leetcode.com/u/hanchivi39/)
-[![Build README](https://github.com/Stewie-pixel/claude-with-leetcode/actions/workflows/build.yml/badge.svg)](https://github.com/Stewie-pixel/claude-with-leetcode/actions/workflows/build-readme.yml)
+[![Build](https://github.com/Stewie-pixel/claude-with-leetcode/actions/workflows/build.yml/badge.svg)](https://github.com/Stewie-pixel/claude-with-leetcode/actions/workflows/build-readme.yml)
 [![Problems Solved](https://img.shields.io/badge/dynamic/json?label=Solved&query=length&url=https://raw.githubusercontent.com/Stewie-pixel/claude-with-leetcode/main/.problemSiteData.json&color=brightgreen&logo=leetcode)](https://github.com/Stewie-pixel/claude-with-leetcode)
 [![Claude Solved](https://img.shields.io/badge/dynamic/json?label=Solved&query=length&url=https://raw.githubusercontent.com/Stewie-pixel/claude-with-leetcode/main/.github/badges/solutions.json&color=orange&logo=claude)](https://github.com/Stewie-pixel/claude-with-leetcode)
 [![GitHub Release](https://img.shields.io/github/v/release/Stewie-pixel/claude-with-leetcode?color=blue&logo=github)](https://github.com/Stewie-pixel/claude-with-leetcode/releases)
-[![Contributors](https://img.shields.io/github/contributors/Stewie-pixel/claude-with-leetcode?color=green&logo=github)](https://github.com/Stewie-pixel/claude-with-leetcode/graphs/contributors)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Sponsor](https://img.shields.io/badge/Sponsor-FF6699.svg?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/Stewie-pixel)
 
