@@ -596,6 +596,14 @@
     "cpp": true
   },
   {
+    "problem": "Number of ZigZag Arrays I",
+    "pattern": "Dynamic Programming, Prefix Sum",
+    "difficulty": "Hard",
+    "link": "number-of-zigzag-arrays-i",
+    "code": "3699",
+    "cpp": true
+  },
+  {
     "problem": "Total Waviness of Numbers in Range I",
     "pattern": "Math",
     "difficulty": "Medium",

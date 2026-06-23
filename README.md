@@ -255,6 +255,12 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
 <sub>[0004 - Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>[✔️](c%2F4-median-of-two-sorted-arrays%2FANALYSIS.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 
+### Dynamic Programming
+
+<sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>C#</sub> | <sub>GO</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Kotlin</sub> | <sub>Python</sub> | <sub>Ruby</sub> | <sub>Rust</sub> | <sub>TS</sub>
+---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
+<sub>[3699 - Number of ZigZag Arrays I](https://leetcode.com/problems/number-of-zigzag-arrays-i)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F3699-number-of-zigzag-arrays-i%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+
 ### Eulerian Circuit
 
 <sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>C#</sub> | <sub>GO</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Kotlin</sub> | <sub>Python</sub> | <sub>Ruby</sub> | <sub>Rust</sub> | <sub>TS</sub>
@@ -363,6 +369,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <sub>Problem</sub> | <sub>Difficulty</sub> | <sub>C</sub> | <sub>C++</sub> | <sub>C#</sub> | <sub>GO</sub> | <sub>Java</sub> | <sub>JS</sub> | <sub>Kotlin</sub> | <sub>Python</sub> | <sub>Ruby</sub> | <sub>Rust</sub> | <sub>TS</sub>
 ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----
 <sub>[1732 - Find the Highest Altitude](https://leetcode.com/problems/find-the-highest-altitude)</sub> | <sub>🟢 Easy</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F1732-find-the-highest-altitude%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
+<sub>[3699 - Number of ZigZag Arrays I](https://leetcode.com/problems/number-of-zigzag-arrays-i)</sub> | <sub>🔴 Hard</sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>[✔️](cpp%2F3699-number-of-zigzag-arrays-i%2FREADME.md)</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub> | <sub><div align='center'>❌</div></sub>
 
 ### Recursion
 
