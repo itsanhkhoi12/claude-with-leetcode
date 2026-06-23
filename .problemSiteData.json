@@ -263,6 +263,14 @@
     "cpp": true
   },
   {
+    "problem": "Get Watched Videos by Your Friends",
+    "pattern": "Array, Hash Table, Breadth-First Search, Graph Theory, Sorting",
+    "difficulty": "Medium",
+    "link": "get-watched-videos-by-your-friends",
+    "code": "1311",
+    "cpp": true
+  },
+  {
     "problem": "Angle Between Hands of a Clock",
     "pattern": "Math",
     "difficulty": "Medium",
