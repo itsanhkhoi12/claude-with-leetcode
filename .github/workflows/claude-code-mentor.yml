@@ -40,7 +40,7 @@ permissions:
 
 jobs:
     explain:
-        if: github.event_name == 'push' && !contains(github.event.head_commit.message, 'claude mentor analysis')
+        if: ${{ github.event_name == 'push' && !contains(github.event.head_commit.message, 'claude mentor analysis') }}
         runs-on: ubuntu-latest
 
         steps:
